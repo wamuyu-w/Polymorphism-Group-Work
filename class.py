@@ -1,29 +1,22 @@
 from pet import Pet
 
 def main():
-    # Creating a new pet
-    pet = input("Enter your pet name")
-
-    # modify the current pet info level like health
-    pet.hunger=int(input("Enter your pet hunger level"))
-    pet.energy=int(input("Enter your pet energy level"))
-    pet.happiness=int(input("Enter your pet happiness level"))
-    
-    # Display the pet information(Current)
-    pet.pet_information()
+    # Creating a new pet(user interaction)
+    my_pet= Pet(input("Enter the name of your pet: "))
 
     # Initialise pet interactions
-    pet.eat()
-    pet.play()
-    pet.sleep()
+    my_pet.eat()
+    my_pet.play()
+    my_pet.sleep()
 
     # initialising pet tricks and adding them with a value
-    pet.train("roll over")
-    pet.train("fetch")
+    my_pet.train("roll over")
+    my_pet.train("fetch")
  
     # Final status and tricks
-    pet.pet_information()
-
-# controlling script execution(running from main and being imported)
+    my_pet.show_tricks()
+    my_pet.get_status()
+  
+# controlling script execution(running from main and being)
 if __name__ == "__main__":
     main()
